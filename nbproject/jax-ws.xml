@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="GetAccountInformationImpl">
+      <implementation-class>com.ledgerapp.service.accountservice.GetAccountInformationImpl</implementation-class>
+    </service>
+    <service name="GetUserImpl">
+      <implementation-class>com.ledgerapp.service.userservice.GetUserImpl</implementation-class>
+    </service>
+    <service name="GetTransactionInformationImpl">
+      <implementation-class>com.ledgerapp.service.transactionservice.GetTransactionInformationImpl</implementation-class>
+    </service>
+    <service name="AddAccountImpl">
+      <implementation-class>com.ledgerapp.service.accountservice.AddAccountImpl</implementation-class>
+    </service>
+    <service name="AddTransactionImpl">
+      <implementation-class>com.ledgerapp.service.transactionservice.AddTransactionImpl</implementation-class>
+    </service>
+    <service name="RegisterUserImpl">
+      <implementation-class>com.ledgerapp.service.userservice.RegisterUserImpl</implementation-class>
+    </service>
+  </services>
+  <clients/>
+</jax-ws>
