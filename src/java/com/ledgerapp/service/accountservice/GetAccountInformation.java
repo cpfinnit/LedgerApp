@@ -7,6 +7,7 @@
 package com.ledgerapp.service.accountservice;
 
 import com.ledgerapp.domain.Account;
+import com.ledgerapp.service.exceptions.InvalidAccountException;
 import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
@@ -21,7 +22,7 @@ import javax.jws.soap.SOAPBinding.Style;
 @SOAPBinding(style = Style.DOCUMENT)
 public interface GetAccountInformation {
     
-    @WebMethod public Account getAccount (String AccountNum);
-    @WebMethod public List<Account> getAccounts (String userName);
+    @WebMethod public Account getAccount (String accountNum) throws InvalidAccountException;
+    @WebMethod public List<Account> getAccounts (String userName) throws InvalidAccountException;
     
 }
