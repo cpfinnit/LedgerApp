@@ -17,13 +17,12 @@ import javax.jws.WebService;
 public class AddAccountImpl implements AddAccount {
 
     @Override
-    public Account AddAccount(String accountName, String accountNumber, String bankName) {
+    public void AddAccount(String accountName, String accountNumber, String bankName) {
         
         Account account = new Account();
         account.setAccountName(accountName);
         account.setAccountNum(accountNumber);
         account.setBankName(bankName);
-        return account;
         
     }
     

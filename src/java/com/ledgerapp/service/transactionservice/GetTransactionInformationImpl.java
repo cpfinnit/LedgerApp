@@ -7,6 +7,7 @@
 package com.ledgerapp.service.transactionservice;
 
 import com.ledgerapp.domain.Transaction;
+import com.ledgerapp.service.exceptions.InvalidTransactionException;
 import javax.jws.WebService;
 
 /**
@@ -17,7 +18,7 @@ import javax.jws.WebService;
 public class GetTransactionInformationImpl implements GetTransactionInformation {
 
     @Override
-    public Transaction getTransaction() {
+    public Transaction getTransaction() throws InvalidTransactionException {
         
         Transaction trans = new Transaction();
         
@@ -25,6 +26,13 @@ public class GetTransactionInformationImpl implements GetTransactionInformation 
         trans.setToFrom("Moe's Tavern");
         trans.setTransDate("11/1/2013");
         trans.setTransAmount(35.99);
+        
+        if (trans == null)
+        {
+           throw new InvalidTransactionException("Invalid transaction", null); 
+        }
+            
+                
         
         return trans;
         

@@ -20,7 +20,7 @@ import javax.jws.soap.SOAPBinding.Style;
  */
 @WebService
 @SOAPBinding(style = Style.DOCUMENT)
-public interface GetAccountInformation {
+public interface GetAccount {
     
     @WebMethod public Account getAccount (String accountNum) throws InvalidAccountException;
     @WebMethod public List<Account> getAccounts (String userName) throws InvalidAccountException;

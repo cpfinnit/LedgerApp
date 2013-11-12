@@ -20,6 +20,6 @@ import javax.jws.soap.SOAPBinding.Style;
 @SOAPBinding(style = Style.DOCUMENT)
 public interface AddAccount {
     
-    @WebMethod public Account AddAccount(String accountName, String accountNumber, String bankName);
+    @WebMethod public void AddAccount(String accountName, String accountNumber, String bankName);
     
 }

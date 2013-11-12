@@ -7,6 +7,7 @@
 package com.ledgerapp.service.userservice;
 
 import com.ledgerapp.domain.User;
+import com.ledgerapp.service.exceptions.InvalidUserException;
 import javax.jws.WebService;
 
 /**
@@ -17,10 +18,16 @@ import javax.jws.WebService;
 public class GetUserImpl implements GetUser {
 
     @Override
-    public User getUser(String userName) {
+    public User getUser(String userName) throws InvalidUserException {
         
         User user = new User();
         user.setUsername("HomerSimpson");
+        
+        if (user == null)
+        {
+           throw new InvalidUserException("Invalid Username", userName); 
+        }
+            
         
         return user;
     }

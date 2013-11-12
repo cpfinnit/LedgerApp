@@ -7,6 +7,7 @@
 package com.ledgerapp.service.transactionservice;
 
 import com.ledgerapp.domain.Transaction;
+import com.ledgerapp.service.exceptions.InvalidTransactionException;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
@@ -20,6 +21,6 @@ import javax.jws.soap.SOAPBinding.Style;
 @SOAPBinding(style = Style.DOCUMENT)
 public interface GetTransactionInformation {
     
-    @WebMethod public Transaction getTransaction();
+    @WebMethod public Transaction getTransaction() throws InvalidTransactionException;
     
 }

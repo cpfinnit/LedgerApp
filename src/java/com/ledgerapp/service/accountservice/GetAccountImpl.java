@@ -16,17 +16,16 @@ import javax.jws.WebService;
  *
  * @author Jimmy
  */
-@WebService(endpointInterface = "com.ledgerapp.service.accountservice.GetAccountInformation")
-public class GetAccountInformationImpl implements GetAccountInformation {
+@WebService(endpointInterface = "com.ledgerapp.service.accountservice.GetAccount")
+public class GetAccountImpl implements GetAccount {
 
     @Override
     public Account getAccount(String accountNum) throws InvalidAccountException {
         
-        //Account account = new Account();
-        Account account = null;
-        //account.setAccountName("My Checking Account");
-        //account.setAccountNum("8675309");
-        //account.setBankName("First National Bank of Springfield");
+        Account account = new Account();
+        account.setAccountName("My Checking Account");
+        account.setAccountNum("8675309");
+        account.setBankName("First National Bank of Springfield");
         
         if (account == null)
            throw new InvalidAccountException("Invalid Account type", accountNum);
