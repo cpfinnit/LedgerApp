@@ -3,13 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Git/LedgerApp/src/java/com/ledgerapp/service/userservice/RegisterUser.java</file>
-            <file>file:/D:/Git/LedgerApp/src/java/com/ledgerapp/service/accountservice/GetAccountImpl.java</file>
-            <file>file:/D:/Git/LedgerApp/src/java/com/ledgerapp/service/userservice/GetUserImpl.java</file>
-            <file>file:/D:/Git/LedgerApp/src/java/com/ledgerapp/service/userservice/GetUser.java</file>
-            <file>file:/D:/Git/LedgerApp/src/java/com/ledgerapp/service/transactionservice/GetTransactionInformationImpl.java</file>
-            <file>file:/D:/Git/LedgerApp/src/java/com/ledgerapp/service/userservice/RegisterUserImpl.java</file>
-            <file>file:/D:/Git/LedgerApp/src/java/com/ledgerapp/service/transactionservice/GetTransactionInformation.java</file>
+            <file>file:/D:/Git/LedgerApp/src/java/com/ledgerapp/service/restful/exceptions/EntityNotFoundMapper.java</file>
+            <file>file:/D:/Git/LedgerApp/src/java/com/ledgerapp/service/exceptions/UserNotFoundException.java</file>
+            <file>file:/D:/Git/LedgerApp/src/java/com/ledgerapp/service/restful/exceptions/UserNotFoundMapper.java</file>
+            <file>file:/D:/Git/LedgerApp/src/java/com/ledgerapp/service/restful/users/UserResource.java</file>
         </group>
     </open-files>
 </project-private>

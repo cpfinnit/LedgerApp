@@ -6,28 +6,48 @@
 
 package com.ledgerapp.domain;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.MapKeyColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author Jimmy
  */
-public class User {
-    
+
+@XmlRootElement(name="User")
+@Entity
+@Table(name="users")
+public class User implements Serializable {
+        
+        @Id
+        @GeneratedValue
+        @Column(name="id")
+        private int id;
+        
+        @Column(name="username", unique=true)
         private String username;
-	
-	public User(){};
-	
-	//This ArrayList holds a list of the user's Accounts
-	private Map<String, Account> accounts = new HashMap<>();
-	
-	
-	public User(String _username) {
-		this.username = _username;
-	}
-	
+       
+        
+        private List<Account> accounts = new ArrayList();
+        
+        @OneToMany(cascade={CascadeType.ALL})
+        public List<Account> getAccounts() {
+            return accounts;
+        }
+
 	/**
 	 * Gets username
 	 * @return
@@ -43,50 +63,18 @@ public class User {
 	public void setUsername(String username) {
 		this.username = username;
 	}
+        
+        public void addAccount(Account account) {
+            accounts.add(account);
+        }
+        
+        public void setID(int id) {
+            this.id = id;
+        }
 	
-	/**
-	 * Adds account to HashMap
-	 * @param key
-	 * @param account
-	 */
-	public void addAccount(String key, Account account) {
-         this.accounts.put(key, account);
-	}
-	
-	/**
-	 * Returns the associated account for a given key.
-	 * @param key
-	 * @return
-	 */
-	public Account getAccount(String key) {
-         return this.accounts.get(key);
-	}
-	
-	/**
-	 * Returns Set of strings containing account keys
-	 * @return
-	 */
-    public Set<String> getKeySet() {
-        Set<String> keySet = accounts.keySet();
-	
-        return keySet;
-    }
-    
-    /**
-     * Returns the number of associated accounts.
-     * @return
-     */
-    public int getAccountSize() {
-    	return this.accounts.size();
-    }
-
-	public Map<String, Account> getAccounts() {
-		return accounts;
-	}
-    
-    public void setAccounts(Map<String, Account> accounts) {
-    	this.accounts = accounts;
-    }
+        public int getID() {
+            return id;
+        }
     
     @Override
     public String toString() {

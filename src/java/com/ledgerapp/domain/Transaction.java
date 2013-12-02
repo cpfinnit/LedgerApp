@@ -6,10 +6,13 @@
 
 package com.ledgerapp.domain;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  *
  * @author Jimmy
  */
+@XmlRootElement(name="Transaction")
 public class Transaction {
     
     private String transDate;

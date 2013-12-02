@@ -6,15 +6,34 @@
 
 package com.ledgerapp.domain;
 
+import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  *
  * @author Jimmy
  */
-public class Account {
-    
+@Entity
+@Table(name="accounts")
+@XmlRootElement(name="Account")
+public class Account implements Serializable {
+        
+        @Column(name="accountname")
         private String accountName = null;
+        @Id
+        @Column(name="accountnum")
 	private String accountNum = null;
+        @Column(name="bankname")
 	private String bankName = null;
+        @Column(name="username")
+        private String username = null;
+        
+        private User user = null;
 	
 	public Account (){}
 	
@@ -24,6 +43,11 @@ public class Account {
 		this.accountNum = _accountNum;
 		this.bankName = _bankName;
 	}
+        
+        @ManyToOne
+        public User getUser() {
+            return user;
+        }
 
 	public String getAccountName() {
 		return accountName;
@@ -41,6 +65,7 @@ public class Account {
 		this.accountNum = accountNum;
 	}
 
+
 	public String getBankName() {
 		return bankName;
 	}
@@ -48,6 +73,18 @@ public class Account {
 	public void setBankName(String bankName) {
 		this.bankName = bankName;
 	}
+        
+        public String getUsername() {
+            return username;
+        }
+        
+        public void setUsername(String username) {
+            this.username = username;
+        }
+        
+        public void setUser(User user) {
+            this.user = user;
+        }
 	
 	public boolean validate() {
 		
