@@ -7,7 +7,6 @@
 package com.ledgerapp.business.user;
 
 import com.ledgerapp.domain.User;
-import com.ledgerapp.service.exceptions.UserNotFoundException;
 
 /**
  *
@@ -16,7 +15,7 @@ import com.ledgerapp.service.exceptions.UserNotFoundException;
 public interface UserMgr {
     
     public User create(User user);
-    public User read(String username);
+    public User read(int id);
     public User update(String username, String _username);
-    public void delete(String username);  
+    public void delete(String user); 
 }

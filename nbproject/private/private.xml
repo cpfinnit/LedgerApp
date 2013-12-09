@@ -3,9 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/D:/Git/LedgerApp/src/java/com/ledgerapp/business/user/UserMgr.java</file>
             <file>file:/D:/Git/LedgerApp/src/java/com/ledgerapp/service/restful/exceptions/EntityNotFoundMapper.java</file>
-            <file>file:/D:/Git/LedgerApp/src/java/com/ledgerapp/service/exceptions/UserNotFoundException.java</file>
-            <file>file:/D:/Git/LedgerApp/src/java/com/ledgerapp/service/restful/exceptions/UserNotFoundMapper.java</file>
+            <file>file:/D:/Git/LedgerApp/src/java/com/ledgerapp/business/user/UserMgrBean.java</file>
             <file>file:/D:/Git/LedgerApp/src/java/com/ledgerapp/service/restful/users/UserResource.java</file>
         </group>
     </open-files>
